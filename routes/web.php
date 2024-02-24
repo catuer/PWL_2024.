@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -59,10 +62,18 @@ Route::get('/user/{name?}', function ($name='John') {
 Route::get('/user/profile', function () {
     // ...
 })->name('profile');
-*/
 
-//controller
-Route::get('hello', [HomeController::class,'hello']);
-Route::get('index', [HomeController::class,'index']);
-Route::get('/about', [HomeController::class,'about']);
-Route::get('article/{articleId}', [HomeController::class,'articles']);
+
+//controller page
+Route::get('index', [PageController::class,'index']);
+Route::get('/about', [PageController::class,'about']);
+Route::get('article/{articleId}', [PageController::class,'articles']);
+*/
+//controller home 
+Route::get('index', [HomeController::class,'selamat datang']);
+
+//controller about
+Route::get('/about', [AboutController::class,'about']);
+
+//controller article
+Route::get('article/{articleId}', [ArticleController::class,'articles']);

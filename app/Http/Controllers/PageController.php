@@ -4,15 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class PageController extends Controller
 {
-    public function hello(){
-        return 'hello';
-    }
-   public function index(){
+    /*public function index(){
         return 'Selamat datang ';
     }
-    /*
     public function about(){
         return 'Nama : Catur Wulan Ndari <br> NIM : 2141762111 ';
     }
