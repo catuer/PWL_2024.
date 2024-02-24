@@ -63,3 +63,6 @@ Route::get('/user/profile', function () {
 
 //controller
 Route::get('hello', [HomeController::class,'hello']);
+Route::get('index', [HomeController::class,'index']);
+Route::get('/about', [HomeController::class,'about']);
+Route::get('article/{articleId}', [HomeController::class,'articles']);
