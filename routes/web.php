@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,7 +67,9 @@ Route::get('/user/profile', function () {
 
 //controller page
 Route::get('index', [PageController::class,'index']);
+
 Route::get('/about', [PageController::class,'about']);
+
 Route::get('article/{articleId}', [PageController::class,'articles']);
 */
 //controller home 
@@ -77,3 +80,6 @@ Route::get('/about', [AboutController::class,'about']);
 
 //controller article
 Route::get('article/{articleId}', [ArticleController::class,'articles']);
+
+//resource controller
+Route::resource('photos', PhotoController::class)->except([ 'create', 'store', 'update', 'destroy']);
