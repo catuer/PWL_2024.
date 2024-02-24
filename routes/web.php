@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-/*Route::get('/hello', function () { 
+Route::get('/hello', function () { 
     return 'Hello World'; 
 }); 
 Route::get('/hello', function () { 
@@ -58,4 +58,3 @@ Route::get('/user/{name?}', function ($name='John') {
 Route::get('/user/profile', function () {
     // ...
 })->name('profile');
-*/
