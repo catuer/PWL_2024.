@@ -83,3 +83,14 @@ Route::get('article/{articleId}', [ArticleController::class,'articles']);
 
 //resource controller
 Route::resource('photos', PhotoController::class)->except([ 'create', 'store', 'update', 'destroy']);
+
+/*view
+Route::get('/greeting', function(){
+    return view('hello', ['name' => 'catur wulan ndari']);
+});
+*/
+
+//view dalam direktori 
+Route::get('/greeting', function(){
+    return view('blog.hello', ['name' => 'catur wulan ndari']);
+});
